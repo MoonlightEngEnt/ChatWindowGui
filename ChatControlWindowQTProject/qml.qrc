@@ -1,0 +1,27 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>qml/MainTemplate.qml</file>
+        <file>Header.qml</file>
+        <file>widgets/ComboBoxCCW.qml</file>
+        <file>widgets/TextEditCCW.qml</file>
+        <file>widgets/NetIdTable.qml</file>
+        <file>widgets/TableViewLineEditCustom.qml</file>
+        <file>ChatControlWindow.qml</file>
+        <file>TabButtons.qml</file>
+        <file>widgets/MarriedTablesWidget.qml</file>
+        <file>widgets/AddFrameWidgetSimple.qml</file>
+        <file>TableViewWithScroll.qml</file>
+        <file>widgets/QuadButtonWidget.qml</file>
+        <file>ChatStatusWindow.qml</file>
+        <file>widgets/GridLayoutCCW.qml</file>
+        <file>widgets/DetailWidget.qml</file>
+        <file>widgets/MessageDetailsWidget.qml</file>
+        <file>TitleWidget.qml</file>
+        <file>widgets/ChatStatusOptionsWidget.qml</file>
+        <file>widgets/CurrentMessageBox.qml</file>
+        <file>widgets/SignalStrengthWidget.qml</file>
+        <file>widgets/StatusPanel.qml</file>
+        <file>widgets/GenericQTButton.qml</file>
+    </qresource>
+</RCC>

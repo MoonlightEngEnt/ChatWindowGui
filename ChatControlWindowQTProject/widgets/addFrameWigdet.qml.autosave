@@ -1,0 +1,14 @@
+import QtQuick 2.0
+
+Rectangle {
+    property 
+Column{
+ Column{
+  Text{
+    id:
+    text   
+  } 
+ }
+    
+}
+}
