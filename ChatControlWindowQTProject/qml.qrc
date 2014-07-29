@@ -23,5 +23,6 @@
         <file>widgets/SignalStrengthWidget.qml</file>
         <file>widgets/StatusPanel.qml</file>
         <file>widgets/GenericQTButton.qml</file>
+        <file>resources/style.js</file>
     </qresource>
 </RCC>

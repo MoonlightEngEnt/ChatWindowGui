@@ -4,7 +4,6 @@ QT += qml quick network widgets
 
 SOURCES += main.cpp \
     framelist.cpp \
-    listmodelccw.cpp \
     controllerinterface.cpp \
     GuiControllerCommon.cpp \
     model/controlwindowmodel.cpp \
@@ -23,12 +22,11 @@ QML_IMPORT_PATH = qml/
 # Default rules for deployment.
 include(deployment.pri)
 
-OTHER_FILES += \
+OTHER_FILES +=
     #qml/Template.qml
 
 HEADERS += \
     framelist.h \
-    listmodelccw.h \
     controllerinterface.h \
     GuiControllerCommon.h \
     model/controlwindowmodel.h \

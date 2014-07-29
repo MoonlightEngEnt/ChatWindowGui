@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
     ControlWindowModel controlModel;
     FramePacket framePacket;
     QObject::connect(&controlModel, SIGNAL(addFrame()), &client, SLOT(sendCleaning()));
-    QObject::connect(&client, SIGNAL(addPacketData(QStringList)), &framePacket, SLOT(setPacketData(QStringList)));
+//    QObject::connect(&client, SIGNAL(addPacketData(QStringList)), &framePacket, SLOT(setPacketData(QStringList)));
 
 //    quick::UeStatus* status = quick::GetUeStatus();
 //    qDebug() << "Net: " << status->GetNet();
@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
     QQmlContext *context = engine.rootContext();
     context->setContextProperty("controlModel",&controlModel);
     context->setContextProperty("framePacket",&framePacket);
-    qmlRegisterUncreatableType<FramePacketType>(ENUM_TYPES, 1, 0, "PacketTypes", "");
+//    qmlRegisterUncreatableType<FramePacketType::Type>(ENUM_TYPES, 1, 0, "PacketTypes", "");
     engine.load(QUrl(QStringLiteral("qrc:///main.qml")));
 
     return app.exec();
