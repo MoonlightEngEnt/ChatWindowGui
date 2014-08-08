@@ -9,21 +9,26 @@ import 'widgets/'
 
 Rectangle {
     id: header
+    property alias widgetCenterRectBackgroundColor: heading.color
+    property alias widgetHeaderTitle: title.text
+    property alias widgetHeaderTitleTextColor: title.color
+    property string widgetHeaderTextColors:"#0DF5FD"
+
     property string headerColor: "#0A197C" //"#06361B" green
-    property string headerTitle: "Controller"
-    property string headerBackgroundColor: "#0A197C"
+    property alias widgetHeaderBackgroundColor: header.color
     property string headerTextColor: "#0DF5FD"
-    property string idColors: headerTextColor
+    property string idColors: widgetHeaderTextColors
     property string widgetBorderColor:  "#0DF5FD" //light blue
     property int widgetCenterRecBorderWidth:1
     property int idTextSize: 22
     property int titleSize: 23
     property variant currentMessageData: ["red", "9325235","Message Vaild"]
-    gradient: Gradient {
-          GradientStop { position: 0.43; color: "#0A197C" }
-          GradientStop { position: 0.1; color: "#0DF5FD" }
-         // GradientStop { position: 1.0; color: "green" }
-      }
+    color: "green"
+    //    gradient: Gradient {
+//          GradientStop { position: 0.43; color: "#0A197C" }
+//          GradientStop { position: 0.1; color: "#0DF5FD" }
+//         // GradientStop { position: 1.0; color: "green" }
+//      }
 
 //    Rectangle{
 //        id:titleRect
@@ -72,6 +77,7 @@ Rectangle {
         height: heading.height* (0.3)
         anchors.bottom: parent.bottom
         anchors.horizontalCenter: parent.horizontalCenter
+        signalStrenghBackgroundColor: widgetCenterRectBackgroundColor
        // anchors.verticalCenter:  parent.verticalCenter
         }
         Row{ id:clock;

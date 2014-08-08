@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
     ControlWindowModel controlModel;
     FramePacket framePacket;
     QObject::connect(&controlModel, SIGNAL(addFrame()), &client, SLOT(sendCleaning()));
-//    QObject::connect(&client, SIGNAL(addPacketData(QStringList)), &framePacket, SLOT(setPacketData(QStringList)));
+    QObject::connect(&client, SIGNAL(addPacketData(QStringList)), &framePacket, SLOT(setPacketData(QStringList)));
 
 //    quick::UeStatus* status = quick::GetUeStatus();
 //    qDebug() << "Net: " << status->GetNet();

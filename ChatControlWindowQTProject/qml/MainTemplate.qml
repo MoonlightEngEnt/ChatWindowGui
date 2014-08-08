@@ -3,6 +3,8 @@ import QtQuick.Controls 1.0
 import QtQuick.Controls 1.2
 import '../'
 import '../widgets/'
+import "../resources/style.js" as Skin
+
 Rectangle {
 
 
@@ -18,6 +20,7 @@ Rectangle {
         id:controlWindow
         width: 1200
         height: 550
+        widgetControlBackgroundColor: Skin.CONTROL_WINDOW_BACKGROUND_COLOR
 
         Keys.onPressed: {
             if(event.key == Qt.Key_K){
@@ -29,6 +32,7 @@ Rectangle {
         id:statusWindow
         width: 1200
         height: 550
+        widgetStatusBackgroundColor: Skin.STATUS_WINDOW_BACKGROUND_COLOR
 
         Keys.onPressed: {
             if(event.key == Qt.Key_K){
@@ -68,8 +72,11 @@ Rectangle {
         width: 1200
         height: 250
         anchors.top: parent.top
-        headerBackgroundColor: "#0A197C"
-        headerTextColor: "#0DF5FD"
+        widgetHeaderTitle: Skin.HEADER_TITLE
+        widgetHeaderTitleTextColor:Skin.HEADER_TITLE_TEXT_COLOR
+        widgetHeaderTextColors: Skin.HEADER_TEXT_COLORS
+        widgetCenterRectBackgroundColor: Skin.HEADER_BACKGROUND_MIDDLE_RECT_COLOR
+        widgetHeaderBackgroundColor: Skin.HEADER_BACKGROUND_COLOR
     }
     TabButtons{
         id:tabButtons
@@ -78,8 +85,11 @@ Rectangle {
         buttonWidth:tabButtons.width/buttonsVisible.length
         buttonHeight: tabButtons.height
         buttonsVisible: [true,true]
-        buttonsText: ['Chat Control','Chat Status']
+        buttonsText: [Skin.TAB_TITLE_1,Skin.TAB_TITLE_2]
+        tabTextColor: Skin.TAB_TEXT_COLOR
         anchors.top: head.bottom
+        tabSelectedColor: Skin.TAB_SELECTED_COLOR
+        tabUnselectedColor: Skin.TAB_UNSELECTED_COLOR
 
         onButtonClicked: {
             switch(buttonPressed){

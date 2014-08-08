@@ -8,19 +8,20 @@ import '../'
 import 'widgets/'
 
 Rectangle {
+    id: chatWindow
     width: 1200
     height: 550
     property variant buttonNames: ["Deattach","Deattach","Deattach","Deattach"]
     property int marginValue:12
-    property string controlBackgroundColor: "#06361B"
+    property alias widgetControlBackgroundColor: chatWindow.color
     property string controlTextColor: "#0DF5FD"
     property string controlAddFrameBackgroundColor:"#0A197C"
     property string controlAddFrameBorderColor:"#06361B" // Green
     signal quadButtonsPressed(int index)
-    gradient: Gradient {
-          GradientStop { position: 0.0; color: controlBackgroundColor }
-          GradientStop { position: 0.83; color: "#0A197C" }
-      }
+//    gradient: Gradient {
+//          GradientStop { position: 0.0; color: controlBackgroundColor }
+//          GradientStop { position: 0.83; color: "#0A197C" }
+//      }
     ListModel {
         id: testmodel
         ListElement { text: "Banana"; color: "Yellow" }

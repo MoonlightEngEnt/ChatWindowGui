@@ -8,7 +8,8 @@ SOURCES += main.cpp \
     GuiControllerCommon.cpp \
     model/controlwindowmodel.cpp \
     model/heartbeat.cpp \
-    model/framepacket.cpp
+    model/framepacket.cpp \
+    model/settings.cpp
 
 #win32:CONFIG(release, debug|release): LIBS += -L"C:\Users\blackrue\Documents\Big Bevy Stuff\build-ChatControlWindowQTProject-Desktop_Qt_5_3_MinGW_32bit-Debug\debug\\" -lquickTestDLL
 #win32:CONFIG(debug, debug|release): LIBS += -L"C:\Users\blackrue\Documents\Big Bevy Stuff\build-ChatControlWindowQTProject-Desktop_Qt_5_3_MinGW_32bit-Debug\debug" -lquickTestDLL
@@ -34,4 +35,5 @@ HEADERS += \
 #    quickTest.h
     model/heartbeat.h \
     model/framepacket.h \
-    model/framepackettype.h
+    model/framepackettype.h \
+    model/settings.h

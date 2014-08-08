@@ -5,9 +5,12 @@ Rectangle {
     signal curentMessageBoxClicked(int index)
     property int cellHeight
     property int cellWidth
-    width: cellWidth -10
-    height: cellHeight -10
-    border.color: currentMessageData[0]
+    property string widgetBoxColor: currentMessageData[0]
+    property string widgetDataOne: currentMessageData[1]
+    property string widgetDataTwo: currentMessageData[2]
+    width: 0
+    height:  cellHeight -10;
+    border.color: widgetBoxColor
     border.width: 3
 
 
@@ -16,9 +19,34 @@ Rectangle {
         Column{
             anchors.fill: parent
             anchors.margins: 6
-             Row{ id:titleRect; spacing:5; Text {id:title; text:"Type:"; } Text {id:detailValue; text:currentMessageData[1];} }
-             Row{ id:titleRects; spacing:5; Text {id:titles; text:"Type:"; } Text {id:detailValues; text:currentMessageData[2];} }
+             Row{
+                 id:titleRect;
+                 spacing:5;
+                 Text {
+                     id:title;
+                     text:"Type:";
+                 }
+                 Text {
+                     id:detailValue;
+                     text:widgetDataOne
+                 }
+             }
+             Row{
+                 id:titleRects;
+                 spacing:5;
+                 Text {
+                     id:titles;
+                     text:"Type:";
+                 }
+                 Text {
+                     id:detailValues;
+                     text:widgetDataTwo
+                 }
+                 }
 
         }
     }
+
+    NumberAnimation on width  { to: cellWidth -10; duration: 1500 }
+    //NumberAnimation on height  { to: cellHeight -10; duration: 5000 }
 }

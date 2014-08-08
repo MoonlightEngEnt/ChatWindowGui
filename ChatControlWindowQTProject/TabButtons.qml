@@ -22,6 +22,8 @@ Row {
     signal button5clicked
     signal button6clicked
     property string tabTextColor: "#0DF5FD"
+    property string tabSelectedColor
+    property string tabUnselectedColor
 
     property string buttonBorderColor: "#06361B"
     property int buttonBorderWidth: 3
@@ -46,7 +48,7 @@ Row {
                     id: button
                     implicitHeight: buttonHeight
                     implicitWidth: buttonWidth
-                           color: (previousPressed == index) ?  "#06361B" : "#0A197C"
+                           color: (previousPressed == index) ?  tabSelectedColor : tabUnselectedColor
                            Rectangle{
 
                              id:top

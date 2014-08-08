@@ -6,10 +6,15 @@ import QtQuick.Controls.Styles 1.1
 import QtQuick.Layouts 1.1
 import '../'
 Rectangle{
+    property alias widgetTitleBorderColor: detailsTitle.widgetBorderColor
+    property alias widgetTitleBorderWidth: detailsTitle.widgetBorderWidth
+    property alias widgetTitleTextColor: detailsTitle.widgetTextColor
+    property alias widgetTitleTextSize: detailsTitle.widgetTextSize
     width: parent.width
     height: parent.height
     border.color: 'black'
     border.width: 3
+
 
     TitleWidget{id:detailsTitle;
         width: parent.width

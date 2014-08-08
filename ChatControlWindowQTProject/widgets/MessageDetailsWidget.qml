@@ -8,13 +8,17 @@ import '../'
 
 Rectangle{
     property string widgetBorderColor:  "#0DF5FD" //light blue
-
+    property alias widgetTitleBorderColor: detailsTitle.widgetBorderColor
+    property alias widgetTitleBorderWidth: detailsTitle.widgetBorderWidth
+    property alias widgetTitleTextColor: detailsTitle.widgetTextColor
+    property alias widgetTitleTextSize: detailsTitle.widgetTextSize
     width: parent.width
     height: parent.height
     border.color: widgetBorderColor
     border.width: 3
 
-    TitleWidget{id:detailsTitle;
+    TitleWidget{
+        id:detailsTitle;
         width: parent.width
         height: parent.height *(0.3)
         textEditText: "Message Details"}

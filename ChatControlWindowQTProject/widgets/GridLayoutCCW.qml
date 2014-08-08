@@ -12,6 +12,8 @@ ScrollView{
     property alias gridRepeaterModel: gridView.model
     frameVisible: true
 
+
+
     GridView{
         id:gridView
         width: parent.width
@@ -21,31 +23,17 @@ ScrollView{
         anchors.margins: 10
 
 
-        model: 500
+        model: packets
         delegate:
             CurrentMessageBox{
             id: currentMessage
             cellHeight: gridView.cellHeight
             cellWidth: gridView.cellWidth
+            widgetBoxColor:  model.color == 1 ? "red" : "yellow"
+            widgetDataOne: model.dataOne
+            widgetDataTwo: model.dataTwo
+
              }
-//            Button{
-//            style: ButtonStyle{
-//                background: Rectangle{
-//                    id: buttonRecRightBlenders
-//                    implicitHeight: 60
-//                    implicitWidth: 60
-//                    radius: 100
-//                    border.color: 'black'
-//                    border.width: 3
-
-//                    color: blenderButtonColors
-//                }
-//            }
-//            onClicked: {
-//                blenderButtonColors = 'green'
-//            }
-//        }
-
 
     }
 }
